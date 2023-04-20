@@ -399,3 +399,4 @@ FodyWeavers.xsd
 
 *.vscode
 *.idea
+*.DS_Store
