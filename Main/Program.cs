@@ -1,5 +1,5 @@
 ﻿using LeetCodeProblems;
-using SolutionBase.Utils;
+using SolutionBase;
 
 namespace Main
 {
@@ -7,15 +7,8 @@ namespace Main
     {
        public static void Main(string[] args)
        {
-           var executionTimeCalculator = new SolutionExecutionTimeCalculator();
-           
-           var twoSumProblem = new TwoSumProblem();
-           
-           Action mySolutionAction = () => twoSumProblem.MySolution(new int[] { 2, 7, 11, 15 }, 9);
-           Action solutionAction = () =>  twoSumProblem.Solution(new int[] { 2, 7, 11, 15 }, 9);
-           
-           executionTimeCalculator.MeasureExecutionTime(mySolutionAction);
-           executionTimeCalculator.MeasureExecutionTime(solutionAction);
+           var problemExecutor = new ProblemExecutor();
+           problemExecutor.Execute(new TwoSumProblem(), new object[] { new int[] { 2, 7, 11, 15 }, 9 });
        }
     }
 }
